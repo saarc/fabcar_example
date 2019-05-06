@@ -16,9 +16,6 @@ const ccpPath = path.resolve(__dirname, '..', '..', 'basic-network', 'connection
 const ccpJSON = fs.readFileSync(ccpPath, 'utf8');
 const ccp = JSON.parse(ccpJSON);
 
-// 서버의존모듈
-const express = require('express');
-
 // 인터페이스 연동
 app.get('/', function (req, res) {
   fs.readFile('index.html', function (error, data) {

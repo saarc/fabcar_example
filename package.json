@@ -1,0 +1,15 @@
+{
+    "name": "myfabric",
+    "version": "1.0.0",
+    "description": "Hyperledger myfabric  Sample Application",
+    "main": "server.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "dependencies": {
+        "express": "~4.13.1"
+    },
+    "author": "",
+    "license": "",
+    "keywords": []
+}

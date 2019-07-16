@@ -58,8 +58,8 @@ app.get('/api/query', async function (req, res) {
         const result = await contract.evaluateTransaction('queryAllCars');
         console.log(`Transaction has been evaluated, result is: ${result.toString()}`);
 
-		res.status(200).json({response: result.toString()});
-	    res.end(JSON.stringify(result));
+	var obj = JSON.parse(result);
+	res.status(200).json(obj);//res.end(JSON.stringify(result));
 });
 
 // Query car handle
@@ -97,7 +97,8 @@ app.get('/api/querycar/', async function (req, res) {
         const result = await contract.evaluateTransaction('queryCar', carno);
 
         console.log(`Transaction has been evaluated, result is: ${result.toString()}`);
-        res.status(200).json({response: result.toString()});
+        var obj = JSON.parse(result);
+	res.status(200).json(obj);//res.end(JSON.stringify(result));
     } catch (error) {
         console.error(`Failed to evaluate transaction: ${error}`);
         res.status(400).json(error);

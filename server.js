@@ -19,7 +19,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 // Index page
 app.get('/', function (req, res) {
-  fs.readFile('./application/index.html', function (error, data) {
+  fs.readFile('./index.html', function (error, data) {
               res.send(data.toString());
 
   });
@@ -107,7 +107,7 @@ app.get('/api/querycar/', async function (req, res) {
 
 // Create car page
 app.get('/api/createcar', function (req, res) {
-  fs.readFile('./application/createcar.html', function (error, data) {
+  fs.readFile('./createcar.html', function (error, data) {
               res.send(data.toString());
   });
 });
@@ -163,7 +163,7 @@ app.post('/api/createcar/', async function (req, res) {
 
 // Change car owner page
 app.get('/api/changeowner', function (req, res) {
-  fs.readFile('./application/changeowner.html', function (error, data) {
+  fs.readFile('./changeowner.html', function (error, data) {
               res.send(data.toString());
 
   }); 
